@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DeviceListProject</string>
+    <string name="item_menu1">編集</string>
+    <string name="item_menu2">削除</string>
+</resources>

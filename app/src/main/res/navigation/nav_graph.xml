@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.devicelistproject.ui.ListFragment"
+        android:label="list_fragment"
+        tools:layout="@layout/list_fragment" >
+        <action
+            android:id="@+id/action_listFragment_to_addDeviceInfoDialogFragment"
+            app:destination="@id/addDeviceInfoDialogFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.devicelistproject.ui.DetailFragment"
+        android:label="detail_fragment"
+        tools:layout="@layout/detail_fragment" >
+        <argument
+            android:name="deviceId"
+            app:argType="integer" />
+    </fragment>
+    <dialog
+        android:id="@+id/addDeviceInfoDialogFragment"
+        android:name="com.example.devicelistproject.ui.AddDeviceInfoDialogFragment"
+        android:label="add_device_info_fragment"
+        tools:layout="@layout/add_device_info_fragment" >
+
+        <argument
+            android:name="type"
+            app:argType="string[]" />
+    </dialog>
+</navigation>
